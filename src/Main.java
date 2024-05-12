@@ -22,5 +22,19 @@ public class Main {
         //Get the priority
         System.out.println(Thread.currentThread().getPriority());
 
+        //Check if thread is alive
+        System.out.println(Thread.currentThread().isAlive());
+
+        for (int i = 5; i>0;i--){
+            System.out.println(i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        System.out.println("You are done!");
+
     }
 }
